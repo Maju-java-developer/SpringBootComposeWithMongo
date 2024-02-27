@@ -1,0 +1,16 @@
+version: "5"
+services:
+  mongoDb:
+    image: mongo:latest
+    container_name: "mongoDb"
+    ports:
+      - 27017:27017
+  springboot-docker-compose:
+    build:
+      dockerfile: Dockerfile
+    image: springboot-docker-compose:latest
+    container_name: "springboot-docker-compose"
+    ports:
+      - 8081:8080
+    links:
+      - mongoDb

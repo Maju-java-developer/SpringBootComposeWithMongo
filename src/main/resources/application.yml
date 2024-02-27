@@ -1,0 +1,6 @@
+spring:
+  data:
+    mongodb:
+      database: PRODUCTS
+      host: mongoDb           # MongoDB server host
+      port: 27017               # MongoDB server port
